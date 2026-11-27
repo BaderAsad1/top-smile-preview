@@ -126,10 +126,23 @@ button:focus-visible,summary:focus-visible,a:focus-visible,select:focus-visible,
 .case-rollout,.desk-time{padding-block:clamp(34px,5vw,74px)}
 .case-rollout h2,.close h2,.desk-time h2{font-size:clamp(2rem,3.8vw,4rem);margin:9px 0 0}
 .case-rollout p+p{margin-top:9px}
-.case-faq{margin-top:16px;border-top:1px solid var(--border)}
-.case-faq summary{min-height:44px;padding:9px 0;font-weight:600;color:var(--blue)}
-.case-faq .faq{padding-inline:12px}
-.case-faq .faq p{font-size:.9375rem;color:var(--muted);margin-bottom:12px}
+.case-faq{grid-column:1/-1;margin-top:clamp(12px,3vw,36px);padding-top:clamp(20px,3vw,36px);border-top:1px solid var(--border);scroll-margin-top:16px}
+.faq-intro{margin-bottom:22px}
+.faq-intro h3{font-weight:550;font-size:clamp(1.65rem,3vw,2.65rem);line-height:1.08;letter-spacing:-.045em}
+.faq-intro p{margin-top:9px;color:var(--muted);max-width:63ch}
+.faq-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.faq-topic{min-width:0;border:1px solid var(--border);background:var(--white);border-radius:7px;padding:0 16px}
+.faq-topic h4{margin:0;padding:15px 0 13px;font-size:1rem;font-weight:700}
+.faq-topic details{border-top:1px solid var(--border)}
+.faq-topic summary{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) 24px;align-items:center;gap:10px;min-height:48px;padding:8px 0;color:var(--ink);font-size:1rem;line-height:1.35;font-weight:600}
+.faq-topic summary::-webkit-details-marker{display:none}
+.faq-topic summary:hover,.faq-topic details[open] summary{color:var(--blue)}
+.faq-topic summary>span{width:24px;height:24px;border-radius:50%;position:relative;color:var(--blue);background:var(--pale)}
+.faq-topic summary>span::before,.faq-topic summary>span::after{content:"";position:absolute;top:50%;left:50%;width:10px;height:1.5px;background:currentColor;transform:translate(-50%,-50%)}
+.faq-topic summary>span::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-topic details[open] summary>span::after{display:none}
+.faq-topic details>p{font-size:1rem;color:var(--muted);line-height:1.55;padding:0 26px 14px 0}
+@media (max-width:920px){.faq-topics{grid-template-columns:minmax(0,1fr);gap:12px}.faq-topic{padding-inline:14px}}
 .desk-time{border-top:1px solid var(--border)}
 .desk-time>p:not(.eyebrow){margin-top:10px;color:var(--muted)}
 .desk-time form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;max-width:46rem;margin-top:1.15rem}
@@ -210,20 +223,28 @@ button:focus-visible,summary:focus-visible,a:focus-visible,select:focus-visible,
 
   </div></details>
 </section>
-<section id="rollout" class="case-rollout wrap" aria-label="How the pilot works"><div><p class="eyebrow">Implementation</p><h2>One process for both branches.</h2></div><div><p>We start with the calendars in Oud Metha and Dubai Silicon Oasis. Together we set the rules: what goes straight to reception, which messages your team approves and when each branch goes live.</p><p>Track bookings, attended visits, cancellations refilled and front-desk time by branch.</p><details id="questions" class="case-faq"><summary>Questions about setup</summary><div class="faq">
-<details><summary>Do we have to replace our booking software?</summary><p>The plan starts with the calendars you already use. The written scope shows which booking actions each system supports and which ones stay with reception.</p></details>
-<details><summary>Who gets a reminder?</summary><p>Your team sets the due dates and approves the wording. Reminders go to patients who agreed to receive them and are still due. They stop when a patient books or opts out.</p></details>
-<details><summary>Can patients move a booking in WhatsApp?</summary><p>Where the calendar supports changes, patients can pick a new time in the same conversation. Their original appointment stays in place until the new one is confirmed.</p></details>
-<details><summary>How do cancellations and missed visits work?</summary><p>Once a slot opens, offer it to a patient on the waitlist. It’s booked when the calendar confirms it. For missed visits, follow your branch’s rebooking rules.</p></details>
-<details><summary>Can we keep our existing number and website?</summary><p>We start with your existing WhatsApp and website. Phone is a separate decision: you can start with a missed-call queue and decide whether voice automation belongs in scope.</p></details>
-<details><summary>Who handles treatment questions?</summary><p>Your clinicians. Agents use the aftercare wording and recall dates your team approves. Treatment questions go straight to the care team.</p></details>
-<details><summary>Who can see patient records?</summary><p>We agree which details the workflow needs, who on your team can access them, and which services may process them. We confirm those rules with you before launch.</p></details>
-<details><summary>Can each branch keep its own hours and rules?</summary><p>Yes. Oud Metha and Dubai Silicon Oasis have separate hours, booking rules and staff access. Managers can compare both branches from one view, with the permissions you set.</p></details>
-<details><summary>What happens to appointments already booked?</summary><p>They stay in your calendar. We test bookings, changes and cancellations separately, then agree when to turn on each workflow.</p></details>
-<details><summary>What happens to our records if we stop?</summary><p>Appointments remain in your booking system. The written agreement lists which records you can export and how your data is handed back and removed.</p></details>
-<details><summary>How do pricing and timing work?</summary><p>Once we know the booking software at each branch, we send a scope with a timeline and separate costs for setup, support and any usage.</p></details>
-<details><summary>Can we include payments or insurance checks?</summary><p>Payment links can use your existing provider. The record updates after that provider confirms payment. Insurance checks are scoped separately by payer or clinic system; eligibility is separate from treatment coverage.</p></details>
-</div></details></div></section>
+<section id="rollout" class="case-rollout wrap" aria-label="How the pilot works"><div><p class="eyebrow">Implementation</p><h2>One process for both branches.</h2></div><div><p>We start with the calendars in Oud Metha and Dubai Silicon Oasis. Together we set the rules: what goes straight to reception, which messages your team approves and when each branch goes live.</p><p>Track bookings, attended visits, cancellations refilled and front-desk time by branch.</p></div><section id="questions" class="case-faq" aria-labelledby="questions-title">
+<div class="faq-intro"><h3 id="questions-title">Questions about setup</h3><p>Start with the booking software each branch already uses. We’ll tell you what can connect before you decide.</p></div>
+<div class="faq-topics">
+<div class="faq-topic"><h4 id="faq-topic-1">Getting started</h4><div role="group" aria-labelledby="faq-topic-1">
+<details><summary>Do we need new booking software?<span aria-hidden="true"></span></summary><p>The plan starts with the calendars you already use. The written scope shows which booking actions each system supports and which ones stay with reception.</p></details>
+<details><summary>Can we keep our WhatsApp and website?<span aria-hidden="true"></span></summary><p>We start with your existing WhatsApp and website. Phone is a separate decision: you can start with a missed-call queue and decide whether voice automation belongs in scope.</p></details>
+<details><summary>Can branches keep different rules?<span aria-hidden="true"></span></summary><p>Yes. Oud Metha and Dubai Silicon Oasis have separate hours, booking rules and staff access. Managers can compare both branches from one view, with the permissions you set.</p></details>
+<details><summary>When do we get a quote?<span aria-hidden="true"></span></summary><p>Once we know the booking software at each branch, we send a scope with a timeline and separate costs for setup, support and any usage.</p></details>
+</div></div>
+<div class="faq-topic"><h4 id="faq-topic-2">Bookings and reminders</h4><div role="group" aria-labelledby="faq-topic-2">
+<details><summary>What happens to existing bookings?<span aria-hidden="true"></span></summary><p>They stay in your calendar. We test bookings, changes and cancellations separately, then agree when to turn on each workflow.</p></details>
+<details><summary>Can patients reschedule in WhatsApp?<span aria-hidden="true"></span></summary><p>Where the calendar supports changes, patients can pick a new time in the same conversation. Their original appointment stays in place until the new one is confirmed.</p></details>
+<details><summary>How do you handle cancellations and no-shows?<span aria-hidden="true"></span></summary><p>Once a slot opens, offer it to a patient on the waitlist. It’s booked when the calendar confirms it. For missed visits, follow your branch’s rebooking rules.</p></details>
+<details><summary>Who receives reminders?<span aria-hidden="true"></span></summary><p>Your team sets the due dates and approves the wording. Reminders go to patients who agreed to receive them and are still due. They stop when a patient books or opts out.</p></details>
+</div></div>
+<div class="faq-topic"><h4 id="faq-topic-3">Patient care and data</h4><div role="group" aria-labelledby="faq-topic-3">
+<details><summary>Who answers treatment questions?<span aria-hidden="true"></span></summary><p>Your clinicians. Agents use the aftercare wording and recall dates your team approves. Treatment questions go straight to the care team.</p></details>
+<details><summary>Who can see patient records?<span aria-hidden="true"></span></summary><p>We agree which details the workflow needs, who on your team can access them, and which services may process them. We confirm those rules with you before launch.</p></details>
+<details><summary>What happens to our data if we stop?<span aria-hidden="true"></span></summary><p>Appointments remain in your booking system. The written agreement lists which records you can export and how your data is handed back and removed.</p></details>
+<details><summary>How do payments and insurance work?<span aria-hidden="true"></span></summary><p>Payment links can use your existing provider. The record updates after that provider confirms payment. Insurance checks are scoped separately by payer or clinic system; eligibility is separate from treatment coverage.</p></details>
+</div></div>
+</div></section></section>
 <section class="wrap desk-time" aria-labelledby="desk-title"><p class="eyebrow">Front-desk time</p><h2 id="desk-title">What could reception get back?</h2><p>Estimate how much time reception could get back across both branches.</p><form id="desk-time" autocomplete="off">
 <label>Routine tasks per branch / week <input id="volume" name="volume" type="number" min="0" max="1000" step="1" value="100"></label>
 <label>Minutes per task <input id="minutes" name="minutes" type="number" min="0" max="60" step="1" value="4"></label>
