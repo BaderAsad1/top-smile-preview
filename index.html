@@ -144,11 +144,24 @@ button:focus-visible,summary:focus-visible,a:focus-visible,select:focus-visible,
 .faq-topic details>p{font-size:1rem;color:var(--muted);line-height:1.55;padding:0 26px 14px 0}
 @media (max-width:920px){.faq-topics{grid-template-columns:minmax(0,1fr);gap:12px}.faq-topic{padding-inline:14px}}
 .desk-time{border-top:1px solid var(--border)}
-.desk-time>p:not(.eyebrow){margin-top:10px;color:var(--muted)}
-.desk-time form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;max-width:46rem;margin-top:1.15rem}
-.desk-time label{display:grid;align-content:start;gap:.5rem;font-size:.9375rem}
+.desk-value{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(18px,4vw,56px);align-items:start}
+.desk-time h2{max-width:20ch;text-wrap:balance}
+.desk-value-copy>p:not(.eyebrow){margin-top:12px;max-width:43ch;color:var(--muted)}
+.desk-tasks{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:17px 0 0;list-style:none}
+.desk-tasks li{padding:5px 9px;border:1px solid #A1ABBD;border-radius:4px;background:var(--white);font-size:.9375rem;line-height:1.35}
+.desk-example{padding:clamp(15px,2vw,23px);border:1px solid #A1ABBD;border-left:3px solid var(--blue);border-radius:5px;background:var(--pale);color:var(--ink)}
+.desk-example strong{display:block;margin-top:5px;font-size:clamp(2.05rem,4vw,3.1rem);line-height:1.08;letter-spacing:-.051em;color:var(--blue)}
+.desk-example strong+p{margin-top:4px;font-weight:600}
+.desk-assumption{margin-top:9px;font-size:.875rem;line-height:1.5;color:var(--muted)}
+.desk-estimate{margin-top:13px;border-top:1px solid #A1ABBD}
+.desk-estimate summary{min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--blue);font-size:.9375rem;font-weight:600;list-style:none}
+.desk-estimate summary::-webkit-details-marker{display:none}
+.desk-estimate summary::after{content:'+';font-size:1.1rem;line-height:1}
+.desk-estimate[open] summary::after{content:'−'}
+.desk-time form{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,7.75rem),1fr));gap:.65rem;padding-top:.35rem}
+.desk-time label{display:grid;grid-template-rows:1fr auto;align-content:start;gap:.35rem;font-size:.875rem;line-height:1.4}
 .desk-time input{width:100%;min-width:0}
-.desk-time output{grid-column:1/-1;font-weight:600;color:var(--blue);border-top:1px solid var(--border);padding-top:.65rem}
+.desk-time output{grid-column:1/-1;font-weight:600;color:var(--blue);padding-top:.25rem}
 .close{background:var(--blue);color:var(--white);padding:clamp(31px,5vw,72px) 0}
 .close .eyebrow{color:var(--white)}
 .close p:not(.eyebrow){max-width:50ch}
@@ -196,7 +209,7 @@ button:focus-visible,summary:focus-visible,a:focus-visible,select:focus-visible,
   .agent-menu{grid-template-columns:repeat(2,minmax(0,1fr))}
   .touch-list li{grid-template-columns:40px minmax(0,1fr)}
   .touch-list li .event-status{grid-column:2;justify-self:start}
-  .desk-time form{grid-template-columns:minmax(0,1fr)}
+  .desk-value,.desk-time form{grid-template-columns:minmax(0,1fr)}
   .footer-row{gap:9px}.site-footer .footer-row>span{font-size:.75rem;text-align:right}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.scene{transform:none}}
@@ -245,11 +258,31 @@ button:focus-visible,summary:focus-visible,a:focus-visible,select:focus-visible,
 <details><summary>How do payments and insurance work?<span aria-hidden="true"></span></summary><p>Payment links can use your existing provider. The record updates after that provider confirms payment. Insurance checks are scoped separately by payer or clinic system; eligibility is separate from treatment coverage.</p></details>
 </div></div>
 </div></section></section>
-<section class="wrap desk-time" aria-labelledby="desk-title"><p class="eyebrow">Front-desk time</p><h2 id="desk-title">What could reception get back?</h2><p>Estimate how much time reception could get back across both branches.</p><form id="desk-time" autocomplete="off">
-<label>Routine tasks per branch / week <input id="volume" name="volume" type="number" min="0" max="1000" step="1" value="100"></label>
-<label>Minutes per task <input id="minutes" name="minutes" type="number" min="0" max="60" step="1" value="4"></label>
-<label>Share the agent could handle (%) <input id="share" name="share" type="number" min="0" max="100" step="1" value="60"></label>
-<output aria-live="polite" for="volume minutes share">8 hours per week across both branches</output></form></section>
+<section class="wrap desk-time" aria-labelledby="desk-title">
+  <div class="desk-value">
+    <div class="desk-value-copy">
+      <p class="eyebrow">Front desk</p>
+      <h2 id="desk-title">More time for patients.</h2>
+      <p>Let agents handle routine appointment messages so reception can focus on patients who need a person.</p>
+      <ul class="desk-tasks"><li>Confirm bookings</li><li>Reschedule visits</li><li>Send reminders</li></ul>
+    </div>
+    <div class="desk-example">
+      <p class="eyebrow">Example across both branches</p>
+      <strong>8 hours a week</strong>
+      <p>of routine front-desk work</p>
+      <p class="desk-assumption">Assumes each branch handles 100 tasks a week at 4 minutes each, and agents take on 60%.</p>
+      <details class="desk-estimate">
+        <summary>Try your own numbers</summary>
+        <form id="desk-time" autocomplete="off">
+          <label>Tasks per branch each week <input id="volume" name="volume" type="number" min="0" max="1000" step="1" value="100"></label>
+          <label>Minutes per task <input id="minutes" name="minutes" type="number" min="0" max="60" step="1" value="4"></label>
+          <label>Tasks agents can handle (%) <input id="share" name="share" type="number" min="0" max="100" step="1" value="60"></label>
+          <output aria-live="polite" for="volume minutes share">8 hours per week across both branches</output>
+        </form>
+      </details>
+    </div>
+  </div>
+</section>
 <section id="next-step" class="close"><div class="wrap close-grid"><div><p class="eyebrow"><span></span> Next step</p><h2>Get a plan for both branches.<i class="line-point"></i></h2></div><div><p>Email us the name of the booking software each branch uses. We’ll send back what can connect, what reception keeps, and a written timeline and quote. No meeting needed.</p><a class="button" href="mailto:feeda@sociallinemarketing.com?subject=Top%20Smile%20booking%20software&amp;body=Oud%20Metha%20booking%20system%3A%20%0ADubai%20Silicon%20Oasis%20booking%20system%3A%20">Request a written plan</a></div></div></section>
 </main><footer class="site-footer"><div class="wrap footer-row"><a class="brand" href="#main"><svg viewBox="0 0 44 24" fill="none" aria-hidden="true"><path d="M2 19h8c11 0 9-14 20-14h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span>Social Line</span></a><span>Prepared for Top Smile Dental Clinic</span></div></footer><script>(function (root, factory) {
   const engine = factory();
