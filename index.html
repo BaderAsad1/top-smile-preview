@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#FAFAF7"><title>Top Smile | More Enquiries, More Appointments</title><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0iI0ZBRkFGNyIvPgogIDxwYXRoIGQ9Ik02IDE3LjVjNC02IDctNiA5IDBzNSA2IDExLTMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI0MzhGRiIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" type="image/svg+xml"><style>/* Social Line marketing identity: porcelain, ink, AAA ultradeep and the S-line.
+   Sourced from the agency's / entry point, marketing.css and tailwind.config.js. */
+:root {
+  --paper:#FAFAF7; --ink:#101418; --muted:#45494D; --border:#D5D8D5;
+  --blue:#1B2BD8; --stroke:#2438FF; --blue-hover:#121EAE; --pale:#EDF0FF;
+  --panel:#F0F1ED; --white:#FFF;
+  --sans:"General Sans",Arial,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--paper);color:var(--ink)}
+body{margin:0;font:1rem/1.65 var(--sans);text-rendering:optimizeLegibility}
+a{color:inherit}
+figure,blockquote,p,h1,h2,h3,dl,dd{margin:0}
+button,select,input{font:inherit}
+summary{cursor:pointer}
+button:focus-visible,summary:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+::selection{background:#CED4FF;color:var(--ink)}
+[hidden]{display:none!important}
+.skip{position:absolute;top:0;left:16px;transform:translateY(-150%);z-index:5;background:var(--blue);color:var(--white);padding:10px 16px}
+.skip:focus{transform:none}
+.wrap{width:min(1250px,calc(100% - 96px));margin-inline:auto}
+.bar,.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.bar{min-height:84px;border-bottom:1px solid var(--border)}
+.brand{display:inline-flex;gap:16px;align-items:center;min-height:44px;text-decoration:none;white-space:nowrap}
+.brand>span{font-size:18px;font-weight:600;letter-spacing:.18em;line-height:1;text-transform:uppercase}
+.brand svg{width:38px;height:25px;color:var(--stroke);flex:none}
+.place,.eyebrow,.cover-foot,.cover-board figcaption,.book-footer,.scene figcaption{font:500 .75rem/1.45 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.place{border-left:1px solid var(--border);padding-left:20px;margin-right:auto}
+.bar nav{display:flex;gap:22px}
+.bar nav a,.journey-nav a{min-height:44px;display:flex;align-items:center;text-decoration:none;font-size:.875rem}
+.bar nav a:hover,.journey-nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.cover-grid{display:grid;grid-template-columns:minmax(0,1.27fr) minmax(0,.73fr);gap:clamp(22px,6vw,86px);align-items:center;padding-block:clamp(42px,7vw,110px) clamp(40px,6vw,89px)}
+.cover h1,.journey-intro h2,.case-rollout h2,.close h2,.desk-time h2{font-weight:550;line-height:1.02;letter-spacing:-.062em;text-wrap:balance}
+.cover h1{font-size:clamp(3.3rem,6.2vw,6.3rem);margin:16px 0 20px;overflow-wrap:anywhere}
+.cover h1 em{font-style:normal;color:var(--blue)}
+.cover-copy>p:not(.eyebrow){max-width:45ch;color:var(--muted);font-size:clamp(1.06rem,1.55vw,1.375rem);line-height:1.55}
+.button,.simple-actions .primary-action{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:51px;padding:10px 19px;border:1px solid var(--blue);border-radius:5px;background:var(--blue);color:var(--white);font-size:1rem;font-weight:600;text-decoration:none;line-height:1.25}
+.button{margin-top:21px}
+.button:hover,.simple-actions .primary-action:hover:not(:disabled){background:var(--blue-hover)}
+.cover-foot{display:flex;justify-content:space-between;gap:9px;padding-block:14px;border-block:1px solid var(--border)}
+.cover-board{width:100%;min-width:0;padding:clamp(13px,2vw,24px);background:var(--white);border:1px solid #A1ABBD;border-radius:6px;box-shadow:8px 9px 0 var(--pale);position:relative}
+.cover-board::before{content:'';position:absolute;inset:-1px 19% auto 0;height:3px;background:var(--stroke);border-top-left-radius:6px}
+.cover-board figcaption,.book-footer,.book-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cover-board figcaption{padding-bottom:13px;border-bottom:1px solid var(--border);letter-spacing:.015em}
+.book-top{padding-block:15px}
+.book-top strong{font-size:1.65rem;line-height:1.12;letter-spacing:-.04em;font-weight:600}
+.book-top span,.book-lines>span{font:500 .75rem/1.35 var(--mono);color:var(--muted)}
+.book-lines{display:grid;grid-template-columns:59px minmax(0,1fr);gap:7px 10px;align-items:center}
+.book-lines>i{min-height:28px;border-top:1px solid var(--border);background:var(--panel)}
+.book-patient{padding:8px 11px;background:var(--pale);border-left:3px solid var(--blue)}
+.book-patient b,.book-patient small{display:block}
+.book-patient small{color:var(--muted);font-size:.875rem}
+.book-footer{margin-top:12px;border-top:1px solid var(--border);padding-top:11px;letter-spacing:.025em}
+.book-footer i,.receipt i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-right:5px}
+.workflow{padding-top:clamp(42px,6vw,86px)}
+.journey-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.47fr);gap:15px 36px;align-items:end}
+.journey-intro>.eyebrow{grid-column:1/-1}
+.journey-intro h2{font-size:clamp(2.5rem,4.4vw,4.8rem);text-wrap:pretty}
+.journey-intro>p:last-child,.chapter-copy>p:last-child{color:var(--muted);max-width:48ch}
+.journey-nav{display:flex;flex-wrap:wrap;gap:2px 4px;margin:28px 0 0;padding:6px 0;border-block:1px solid var(--border)}
+.journey-nav a{gap:7px;padding:6px 11px;border-radius:4px}
+.journey-nav a[aria-current]{background:var(--blue);color:var(--white)}
+.journey-nav a span{font:500 .75rem/1 var(--mono)}
+.chapter{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.81fr);align-items:center;gap:clamp(22px,7vw,98px);padding:clamp(32px,5vw,64px) 3%;border-bottom:1px solid var(--border);scroll-margin-top:16px}
+.chapter-copy h3{font-size:clamp(1.9rem,3.15vw,3.6rem);line-height:1.1;letter-spacing:-.047em;font-weight:600;margin:9px 0 12px;text-wrap:balance}
+.chapter-copy .eyebrow{color:var(--blue)}
+.scene{position:relative;min-width:0;overflow:hidden;background:var(--panel);border:1px solid #A1ABBD;border-left:3px solid #919AA9;border-radius:5px;transform:translateY(5px);transition:transform .42s ease,background .42s,border-color .42s}
+.chapter.current .scene{background:var(--pale);transform:none;border-left-color:var(--blue)}
+.scene figcaption{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border);gap:9px;font-size:.75rem}
+.scene blockquote{padding:16px 14px;font-size:clamp(1.18rem,2vw,1.75rem);line-height:1.34;letter-spacing:-.022em}
+.scene blockquote::before{content:'“'}
+.scene blockquote::after{content:'”'}
+.receipt{display:flex;align-items:flex-start;gap:4px;padding:11px 14px;border-top:1px solid var(--border);background:var(--white);font-size:.9375rem}
+.receipt i{margin-top:8px;flex:none}
+.receipt small{display:block;font-size:.875rem;color:var(--muted)}
+.crm-section{margin-top:clamp(35px,5vw,64px);background:var(--pale);padding:30px 0;border-block:1px solid var(--border)}
+.crm-drawer>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:17px;min-height:64px}
+.crm-drawer>summary::-webkit-details-marker{display:none}
+.crm-drawer>summary small,.crm-drawer>summary strong{display:block}
+.crm-drawer>summary small,.console-kicker,.console-sub{font:500 .75rem/1.45 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.crm-drawer>summary strong{font-size:clamp(1.75rem,3vw,2.8rem);font-weight:600;line-height:1.15;letter-spacing:-.04em}
+.crm-drawer>summary>span:last-child{font-size:1.75rem;color:var(--blue)}
+.crm-drawer[open]>summary>span:last-child{transform:rotate(45deg)}
+.demo-body{margin-top:21px}
+.crm-intro{margin-bottom:16px}
+.crm-intro h2{font-size:clamp(1.5rem,2.6vw,2.4rem);letter-spacing:-.045em;line-height:1.2}
+.crm-intro p:not(.eyebrow){color:var(--muted);margin-top:5px}
+.crm-console{background:var(--white);border:1px solid #A1ABBD;border-radius:5px;overflow:hidden}
+.console-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 19px;border-bottom:1px solid var(--border)}
+.console-head>div,.console-head label{display:flex;align-items:center;gap:9px}
+.console-head strong{font-size:1.075rem}
+.console-head label{font-size:.9rem;color:var(--muted)}
+.console-head select,.desk-time input{background:var(--white);color:var(--ink);border:1px solid #788291;border-radius:4px;min-height:44px;padding:7px 9px;max-width:100%}
+.console-content{padding:19px}
+.contact-top{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:11px}
+.contact-avatar{display:grid;place-items:center;width:44px;height:44px;border-radius:5px;background:var(--pale);color:var(--blue);font-weight:650}
+.contact-top h3,.ledger-head h3,.agent-card h3,.console-empty h3{font-size:1.5rem;line-height:1.2;letter-spacing:-.035em}
+.contact-top p,.console-empty p,.agent-card>p:not(.console-kicker){color:var(--muted)}
+.state-chip,.event-status{background:var(--pale);color:var(--blue);border-radius:4px;font:500 .75rem/1.45 var(--mono);padding:5px 8px;text-align:center}
+.contact-data{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+.contact-data>div,.agent-card dl>div{padding:9px 11px;background:var(--panel);border-radius:4px}
+.contact-data dt,.agent-card dt{font:500 .75rem/1.4 var(--mono);color:var(--muted)}
+.contact-data dd,.agent-card dd{font-size:.9375rem;line-height:1.45;margin-top:5px;overflow-wrap:anywhere}
+.simple-actions,.console-tabs,.sim-toolbar{display:flex;flex-wrap:wrap;gap:7px;padding:0 19px 12px}
+.console-tabs button,.sim-toolbar button,.agent-menu button,.simple-actions button:not(.primary-action){min-height:44px;background:var(--white);color:var(--blue);border:1px solid #7F8AB1;padding:6px 11px;border-radius:4px;cursor:pointer;font-size:.9375rem}
+.console-tabs button[aria-pressed=true],.agent-menu button[aria-pressed=true]{background:var(--blue);color:var(--white);border-color:var(--blue)}
+.simple-actions button:disabled,.sim-toolbar button:disabled{color:var(--muted);background:var(--panel);border-color:#929A9E;cursor:not-allowed}
+.team-details{border-top:1px solid var(--border);margin:0 19px}
+.team-details summary{min-height:44px;padding:8px 0;color:var(--blue)}
+.team-details .console-tabs,.team-details .sim-toolbar{padding:0 0 11px}
+.approval-banner{display:grid;gap:4px;padding:10px 12px;margin-top:12px;border-left:3px solid var(--blue);background:var(--pale)}
+.approval-banner span,.approval-banner small,.blocked-rule{font-size:.875rem;color:var(--muted)}
+.blocked-rule{padding-top:8px}
+.ledger-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ledger-head span,.touch-list time,.touch-list li span{font-size:.875rem;color:var(--muted)}
+.touch-list{list-style:none;padding:0;margin:12px 0 0;max-height:350px;overflow:auto}
+.touch-list li{display:grid;grid-template-columns:55px minmax(0,1fr) auto;gap:9px;padding:9px 0;border-top:1px solid var(--border)}
+.agent-grid{display:grid;grid-template-columns:minmax(130px,185px) minmax(0,1fr);gap:14px}
+.agent-menu,.agent-card dl{display:grid;gap:6px;align-content:start}
+.agent-menu button{text-align:left}
+.agent-card{border:1px solid var(--border);border-radius:5px;padding:14px}
+.agent-card dl{margin-top:9px}
+.console-foot{padding:10px 19px;border-top:1px solid var(--border);font-size:.875rem;color:var(--muted)}
+.case-rollout,.close-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:19px 56px;align-items:start}
+.case-rollout,.desk-time{padding-block:clamp(34px,5vw,74px)}
+.case-rollout h2,.close h2,.desk-time h2{font-size:clamp(2rem,3.8vw,4rem);margin:9px 0 0}
+.case-rollout p+p{margin-top:9px}
+.case-faq{margin-top:16px;border-top:1px solid var(--border)}
+.case-faq summary{min-height:44px;padding:9px 0;font-weight:600;color:var(--blue)}
+.case-faq .faq{padding-inline:12px}
+.case-faq .faq p{font-size:.9375rem;color:var(--muted);margin-bottom:12px}
+.desk-time{border-top:1px solid var(--border)}
+.desk-time>p:not(.eyebrow){margin-top:10px;color:var(--muted)}
+.desk-time form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;max-width:46rem;margin-top:1.15rem}
+.desk-time label{display:grid;align-content:start;gap:.5rem;font-size:.9375rem}
+.desk-time input{width:100%;min-width:0}
+.desk-time output{grid-column:1/-1;font-weight:600;color:var(--blue);border-top:1px solid var(--border);padding-top:.65rem}
+.close{background:var(--blue);color:var(--white);padding:clamp(31px,5vw,72px) 0}
+.close .eyebrow{color:var(--white)}
+.close p:not(.eyebrow){max-width:50ch}
+.close .button{background:var(--white);color:var(--blue);border-color:var(--white)}
+.close .button:hover{background:var(--pale)}
+.close a:focus-visible{outline-color:var(--white)}
+.site-footer{border-top:1px solid var(--border);padding:12px 0}
+.site-footer .footer-row>span{font-size:.875rem;color:var(--muted)}
+@media(max-width:920px){
+  .wrap{width:calc(100% - 64px)}
+  .cover h1{font-size:clamp(2.75rem,6.2vw,4.8rem)}
+  .place{display:none}.bar{min-height:68px}
+  .chapter{padding-inline:0;gap:24px}
+}
+@media(max-width:680px){
+  .wrap{width:calc(100% - 36px)}
+  .bar{min-height:58px;gap:7px}
+  .brand{gap:6px}
+  .brand>span{font-size:.875rem;letter-spacing:.09em}
+  .brand svg{width:24px}
+  .bar nav{gap:9px}
+  .bar nav a{font-size:.8125rem}
+  .cover-grid,.journey-intro,.chapter,.case-rollout,.close-grid{grid-template-columns:minmax(0,1fr)}
+  .cover-grid{gap:24px;padding-block:29px 26px}
+  .cover h1{font-size:clamp(2.55rem,10.5vw,4rem);margin:9px 0 14px;text-wrap:pretty}
+  .cover-board{width:calc(100% - 7px);max-width:455px;box-shadow:6px 7px 0 var(--pale)}
+  .cover-foot{font-size:.75rem;letter-spacing:0;line-height:1.35}
+  .cover-foot>span:last-child{text-align:right}
+  .journey-intro{gap:8px}
+  .journey-intro h2{font-size:clamp(2.15rem,9vw,3.4rem);letter-spacing:-.05em}
+  .chapter{gap:14px;padding-block:24px}
+  .chapter-copy h3{margin:5px 0 8px;text-wrap:pretty}
+  .journey-nav{margin-top:17px;gap:1px 2px}
+  .journey-nav a{padding:4px 8px}
+  .console-head,.console-content,.console-foot{padding-inline:11px}
+  .console-sub{display:none}
+  .console-head>div,.console-head label{gap:5px}
+  .console-head select{font-size:.875rem;max-width:150px}
+  .contact-top{grid-template-columns:42px minmax(0,1fr)}
+  .state-chip{grid-column:1/-1;justify-self:start}
+  .contact-data{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .simple-actions{padding-inline:11px}
+  .team-details{margin-inline:11px}
+  .agent-grid{grid-template-columns:minmax(0,1fr)}
+  .agent-menu{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .touch-list li{grid-template-columns:40px minmax(0,1fr)}
+  .touch-list li .event-status{grid-column:2;justify-self:start}
+  .desk-time form{grid-template-columns:minmax(0,1fr)}
+  .footer-row{gap:9px}.site-footer .footer-row>span{font-size:.75rem;text-align:right}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.scene{transform:none}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast"><div class="wrap bar"><a class="brand" href="#main" aria-label="Social Line, top"><svg viewBox="0 0 44 24" fill="none" aria-hidden="true"><path d="M2 19h8c11 0 9-14 20-14h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span>Social Line</span></a><span class="place">Prepared for Top Smile</span><nav aria-label="Proposal"><a href="#workflow">Patient journey</a><a href="#crm">Staff demo</a></nav></div></header>
+<main id="main" tabindex="-1"><section class="cover"><div class="wrap cover-grid">
+<div class="cover-copy"><p class="eyebrow">Top Smile Dental Clinic</p><h1>Turn more enquiries<br>into <em>appointments.</em></h1><p>Book more patients from WhatsApp and missed calls, fill gaps when someone cancels, and give reception more time at both branches.</p><a class="button" href="#workflow">See how it works <span aria-hidden="true">↓</span></a></div>
+<figure class="cover-board"><figcaption><span>Top Smile / Appointment book</span><span>Example record</span></figcaption><div class="book-top"><strong>Thursday</strong><span>Oud Metha</span></div><div class="book-lines"><span>2:30 PM</span><i></i><span>3:30 PM</span><div class="book-patient"><b>Maya R.</b><small>Cleaning · Confirmed</small></div><span>4:30 PM</span><i></i></div><div class="book-footer"><span><i></i> Appointment confirmed</span><span>01 / 07</span></div></figure>
+</div><div class="wrap cover-foot"><span>Oud Metha · Dubai Silicon Oasis</span><span>Prepared by Social Line</span></div></section><section id="workflow" class="workflow" aria-labelledby="journey-title"><div class="wrap"><header class="journey-intro"><p class="eyebrow">The patient journey</p><h2 id="journey-title">From a WhatsApp message<br>to a return visit.</h2><p>Maya wants a cleaning this week. Here’s how reception books her visit, fills the slot she gives up and follows up after she leaves.</p></header><nav class="journey-nav" aria-label="Patient journey steps"><a href="#capture"><span>01</span> Enquiry</a><a href="#qualify"><span>02</span> Offer</a><a href="#booking"><span>03</span> Book</a><a href="#changes"><span>04</span> Move</a><a href="#attendance"><span>05</span> Attend</a><a href="#feedback"><span>06</span> Follow up</a><a href="#return-visit"><span>07</span> Recall</a></nav><div class="chapters"><article class="chapter" id="capture" data-progress="0"><div class="chapter-copy"><p class="eyebrow">01 / Enquiry</p><h3>Give every enquiry a next step.</h3><p>Maya asks for a cleaning on WhatsApp. Messages, website enquiries and missed calls go into one queue, with the branch and the person responsible for replying on each record.</p></div><figure class="scene"><figcaption><span>Maya · WhatsApp</span><span>01 / 07</span></figcaption><blockquote>Hi, do you have an appointment for a cleaning this week?</blockquote><div class="receipt"><i aria-hidden="true"></i><div><strong>New enquiry</strong><small>WhatsApp · Oud Metha · Assigned to reception</small></div></div></figure></article><article class="chapter" id="qualify" data-progress="1"><div class="chapter-copy"><p class="eyebrow">02 / Offer</p><h3>Offer a time without the back-and-forth.</h3><p>The booking agent checks available times and Maya’s contact preferences, then drafts a reply for reception to approve. Clinical questions go straight to the care team.</p></div><figure class="scene"><figcaption><span>Booking agent · draft</span><span>02 / 07</span></figcaption><blockquote>Hi Maya, would Thursday at 3:30 PM work for you?</blockquote><div class="receipt"><i aria-hidden="true"></i><div><strong>Draft ready</strong><small>Ready for reception to approve</small></div></div></figure></article><article class="chapter" id="booking" data-progress="2"><div class="chapter-copy"><p class="eyebrow">03 / Book</p><h3>Confirm the slot in the calendar.</h3><p>Maya picks Thursday at 3:30. Once the calendar confirms the booking, reception sees it on her record.</p></div><figure class="scene"><figcaption><span>Maya · WhatsApp</span><span>03 / 07</span></figcaption><blockquote>Thursday at 3:30 works. Thank you!</blockquote><div class="receipt"><i aria-hidden="true"></i><div><strong>Thursday · 3:30 PM</strong><small>Confirmed in the appointment book</small></div></div></figure></article><article class="chapter" id="changes" data-progress="3"><div class="chapter-copy"><p class="eyebrow">04 / Move</p><h3>Move one visit. Fill the opening.</h3><p>Maya asks for Friday. Once her new time is confirmed, reception can offer her old slot to a patient who asked to come in sooner.</p></div><figure class="scene"><figcaption><span>Maya · WhatsApp</span><span>04 / 07</span></figcaption><blockquote>Could I move to Friday at 11 instead?</blockquote><div class="receipt"><i aria-hidden="true"></i><div><strong>Friday · 11:00 AM</strong><small>Thursday slot open for the waitlist</small></div></div></figure></article><article class="chapter" id="attendance" data-progress="4"><div class="chapter-copy"><p class="eyebrow">05 / Attend</p><h3>Follow up after the visit.</h3><p>Reception marks Maya as attended. The aftercare agent prepares the clinic’s approved note, and any treatment questions go back to her care team.</p></div><figure class="scene"><figcaption><span>Reception · clinic record</span><span>05 / 07</span></figcaption><blockquote>Maya attended her Friday appointment.</blockquote><div class="receipt"><i aria-hidden="true"></i><div><strong>Attendance verified</strong><small>Aftercare message ready for review.</small></div></div></figure></article><article class="chapter" id="feedback" data-progress="5"><div class="chapter-copy"><p class="eyebrow">06 / Follow up</p><h3>Make it easy to leave an honest review.</h3><p>Send the same optional review invitation to every patient who attended and agreed to follow-up. How they rate the visit doesn’t change who gets an invitation.</p></div><figure class="scene"><figcaption><span>Review agent · draft</span><span>06 / 07</span></figcaption><blockquote>If you’d like to leave an honest review of your visit, here’s the link. It’s optional.</blockquote><div class="receipt"><i aria-hidden="true"></i><div><strong>Review invitation ready</strong><small>Visit complete · Follow-up agreed</small></div></div></figure></article><article class="chapter" id="return-visit" data-progress="6"><div class="chapter-copy"><p class="eyebrow">07 / Recall</p><h3>Bring patients back when they’re due.</h3><p>Top Smile sets Maya’s next visit date. If she’s due, has agreed to reminders and hasn’t booked, the recall agent prepares a message.</p></div><figure class="scene"><figcaption><span>Recall agent · draft</span><span>07 / 07</span></figcaption><blockquote>Your next visit is due. Would you like to see some times?</blockquote><div class="receipt"><i aria-hidden="true"></i><div><strong>Reminder ready for approval</strong><small>Stops when Maya books or opts out</small></div></div></figure></article></div></div></section><section id="crm" class="crm-section" aria-labelledby="crm-title">
+  <details class="wrap crm-wrap crm-drawer"><summary><span><small>For clinic staff</small><strong>See what reception sees</strong></span><span aria-hidden="true">+</span></summary><div class="demo-body">
+    <header class="crm-intro"><p class="eyebrow">Top Smile front desk</p><h2 id="crm-title">Work through Maya’s appointment.</h2><p>Pick a branch, open Maya’s record and decide which messages to approve.</p></header>
+    <div class="crm-console">
+      <header class="console-head"><div><span class="online-dot" aria-hidden="true"></span><strong>Top Smile</strong><span class="console-sub">WORKSPACE</span></div><label>Branch <select id="lab-branch"><option>Oud Metha</option><option>Dubai Silicon Oasis</option></select></label></header>
+      
+      <div id="console-content" class="console-content" aria-live="polite" aria-atomic="true"><p>Opening the patient record…</p></div>
+      <div class="simple-actions" aria-label="Next demo step"><button type="button" class="primary-action" data-act="advance">Start with the enquiry</button><button hidden type="button" class="primary-action" data-act="approve">Approve draft</button><button hidden type="button" data-act="reject">Reject draft</button></div>
+      <details class="team-details"><summary>Patient history and agent controls</summary>
+        <nav class="console-tabs" aria-label="Console view"><button type="button" data-console-tab="contact" aria-pressed="true">Patient record</button><button type="button" data-console-tab="touches" aria-pressed="false">Contact history</button><button type="button" data-console-tab="agents" aria-pressed="false">Agent rules</button></nav>
+        <div class="sim-toolbar" aria-label="Team controls"><button type="button" data-act="pause" id="pause-action">Pause agent</button><button type="button" data-act="optout">Opt out</button><button type="button" data-act="reset">Start over</button></div>
+      </details>
+      <p class="console-foot">Open Contact history to see each update to Maya’s record.</p>
+    </div>
+
+  </div></details>
+</section>
+<section id="rollout" class="case-rollout wrap" aria-label="How the pilot works"><div><p class="eyebrow">Implementation</p><h2>One process for both branches.</h2></div><div><p>We start with the calendars in Oud Metha and Dubai Silicon Oasis. Together we set the rules: what goes straight to reception, which messages your team approves and when each branch goes live.</p><p>Track bookings, attended visits, cancellations refilled and front-desk time by branch.</p><details id="questions" class="case-faq"><summary>Questions about setup</summary><div class="faq">
+<details><summary>Do we have to replace our booking software?</summary><p>The plan starts with the calendars you already use. The written scope shows which booking actions each system supports and which ones stay with reception.</p></details>
+<details><summary>Who gets a reminder?</summary><p>Your team sets the due dates and approves the wording. Reminders go to patients who agreed to receive them and are still due. They stop when a patient books or opts out.</p></details>
+<details><summary>Can patients move a booking in WhatsApp?</summary><p>Where the calendar supports changes, patients can pick a new time in the same conversation. Their original appointment stays in place until the new one is confirmed.</p></details>
+<details><summary>How do cancellations and missed visits work?</summary><p>Once a slot opens, offer it to a patient on the waitlist. It’s booked when the calendar confirms it. For missed visits, follow your branch’s rebooking rules.</p></details>
+<details><summary>Can we keep our existing number and website?</summary><p>We start with your existing WhatsApp and website. Phone is a separate decision: you can start with a missed-call queue and decide whether voice automation belongs in scope.</p></details>
+<details><summary>Who handles treatment questions?</summary><p>Your clinicians. Agents use the aftercare wording and recall dates your team approves. Treatment questions go straight to the care team.</p></details>
+<details><summary>Who can see patient records?</summary><p>We agree which details the workflow needs, who on your team can access them, and which services may process them. We confirm those rules with you before launch.</p></details>
+<details><summary>Can each branch keep its own hours and rules?</summary><p>Yes. Oud Metha and Dubai Silicon Oasis have separate hours, booking rules and staff access. Managers can compare both branches from one view, with the permissions you set.</p></details>
+<details><summary>What happens to appointments already booked?</summary><p>They stay in your calendar. We test bookings, changes and cancellations separately, then agree when to turn on each workflow.</p></details>
+<details><summary>What happens to our records if we stop?</summary><p>Appointments remain in your booking system. The written agreement lists which records you can export and how your data is handed back and removed.</p></details>
+<details><summary>How do pricing and timing work?</summary><p>Once we know the booking software at each branch, we send a scope with a timeline and separate costs for setup, support and any usage.</p></details>
+<details><summary>Can we include payments or insurance checks?</summary><p>Payment links can use your existing provider. The record updates after that provider confirms payment. Insurance checks are scoped separately by payer or clinic system; eligibility is separate from treatment coverage.</p></details>
+</div></details></div></section>
+<section class="wrap desk-time" aria-labelledby="desk-title"><p class="eyebrow">Front-desk time</p><h2 id="desk-title">What could reception get back?</h2><p>Estimate how much time reception could get back across both branches.</p><form id="desk-time" autocomplete="off">
+<label>Routine tasks per branch / week <input id="volume" name="volume" type="number" min="0" max="1000" step="1" value="100"></label>
+<label>Minutes per task <input id="minutes" name="minutes" type="number" min="0" max="60" step="1" value="4"></label>
+<label>Share the agent could handle (%) <input id="share" name="share" type="number" min="0" max="100" step="1" value="60"></label>
+<output aria-live="polite" for="volume minutes share">8 hours per week across both branches</output></form></section>
+<section id="next-step" class="close"><div class="wrap close-grid"><div><p class="eyebrow"><span></span> Next step</p><h2>Get a plan for both branches.<i class="line-point"></i></h2></div><div><p>Email us the name of the booking software each branch uses. We’ll send back what can connect, what reception keeps, and a written timeline and quote. No meeting needed.</p><a class="button" href="mailto:feeda@sociallinemarketing.com?subject=Top%20Smile%20booking%20software&amp;body=Oud%20Metha%20booking%20system%3A%20%0ADubai%20Silicon%20Oasis%20booking%20system%3A%20">Request a written plan</a></div></div></section>
+</main><footer class="site-footer"><div class="wrap footer-row"><a class="brand" href="#main"><svg viewBox="0 0 44 24" fill="none" aria-hidden="true"><path d="M2 19h8c11 0 9-14 20-14h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span>Social Line</span></a><span>Prepared for Top Smile Dental Clinic</span></div></footer><script>(function (root, factory) {
+  const engine = factory();
+  if (typeof module === 'object' && module.exports) module.exports = engine;
+  else root.TopSmileEngine = engine;
+})(typeof globalThis === 'object' ? globalThis : this, function () {
+  'use strict';
+  const steps = Object.freeze([
+    {label:'Capture', agent:'Intake agent', channel:'WhatsApp', summary:'Create one contact from a new inquiry and assign the selected branch.'},
+    {label:'Qualify', agent:'Booking agent', channel:'WhatsApp', summary:'Record the preferred channel and draft an approved slot proposal.'},
+    {label:'Book', agent:'Scheduling agent', channel:'Clinic calendar', summary:'Book only after a simulated scheduler response confirms the slot.'},
+    {label:'Reschedule', agent:'Waitlist agent', channel:'Calendar + WhatsApp', summary:'Confirm the replacement, release the old slot, and simulate a waitlist refill.'},
+    {label:'Attend', agent:'Aftercare agent', channel:'Reception + WhatsApp', summary:'Record the attended visit before drafting the clinic-approved follow-up.'},
+    {label:'Review', agent:'Review agent', channel:'WhatsApp', summary:'Offer the same neutral invitation to all eligible attendees. No rating gate.'},
+    {label:'Recall', agent:'Recall agent', channel:'WhatsApp', summary:'Draft one reminder only when due; suppress it if booked or opted out.'},
+  ].map(Object.freeze));
+  const drafts = Object.freeze({
+    1:['Booking agent','WhatsApp','Slot proposal'],
+    3:['Booking agent','WhatsApp','Reschedule confirmation and reminder'],
+    4:['Aftercare agent','WhatsApp','Clinic-approved aftercare'],
+    5:['Review agent','WhatsApp','Neutral review invitation'],
+    6:['Recall agent','WhatsApp','Due-care reminder'],
+  });
+  const times = ['09:02','09:04','09:12','10:18','11:46','11:48','09:00'];
+  function create(branch='Oud Metha') {
+    const selected = branch === 'Dubai Silicon Oasis' ? branch : 'Oud Metha';
+    return {branch:selected, stage:-1, events:[], consent:null, needsApproval:false,
+      blockedReason:'', owner:'Unassigned', appointment:null, finished:false, paused:false,
+      attended:false, reviewRequested:false, recallRequested:false, contactId:null, draft:null};
+  }
+  function event(state, agent, channel, text, status, metadata={}) {
+    return {...state, events:[...state.events,
+      {time:times[Math.max(0,state.stage)],agent,channel,text,status,stage:state.stage,
+        simulated:true,...metadata}]};
+  }
+  function queue(state) {
+    const item=drafts[state.stage];
+    if (!item) return state;
+    const [agent, channel, text]=item;
+    if (state.consent!==true) return event({...state,blockedReason:'No contact consent'},agent,channel,text+' held: no contact consent.','Blocked');
+    return event({...state,needsApproval:true,draft:{agent,channel,text}},agent,channel,text+' drafted for staff approval.','Draft');
+  }
+  function act(state, action) {
+    if (action==='reset') return create(state.branch);
+    if (action==='pause') return state.paused ? state : event({...state,paused:true,blockedReason:'Outbound paused by staff'},'Reception','CRM','Staff paused outbound activity.','Paused');
+    if (action==='resume') return state.paused ? event({...state,paused:false,blockedReason:state.consent===false?'Patient opted out':''},'Reception','CRM','Staff resumed the demo; consent still governs every send.','Resumed') : state;
+    if (action==='optout') {
+      if (state.consent===false) return state;
+      return event({...state,consent:false,needsApproval:false,draft:null,blockedReason:'Patient opted out',
+        finished:state.stage===6},'Intake agent','Consent log','Contact opted out. Discarded any pending draft and stopped optional outreach.','Opted out');
+    }
+    if (action==='reject') {
+      if (!state.needsApproval || !state.draft) return state;
+      const {agent,channel,text}=state.draft;
+      return event({...state,needsApproval:false,draft:null,blockedReason:'Draft rejected by staff',finished:state.stage===6},agent,channel,text+' rejected; nothing sent.','Rejected');
+    }
+    if (action==='approve') {
+      if (state.paused || state.consent!==true || !state.needsApproval || !state.draft) return state;
+      if ((state.stage===5 || state.stage===6) && (!state.attended || (state.stage===5 ? state.reviewRequested : state.recallRequested))) return state;
+      const {agent,channel,text}=state.draft;
+      return event({...state,needsApproval:false,draft:null,blockedReason:'',finished:state.stage===6,
+        reviewRequested:state.reviewRequested || state.stage===5,recallRequested:state.recallRequested || state.stage===6},
+      agent,channel,text+' approved and marked sent in the sandbox.','Simulated send');
+    }
+    if (action!=='advance' || state.finished || state.paused || state.needsApproval || state.stage>=6) return state;
+    let next={...state,stage:state.stage+1,blockedReason:state.consent===false?'Patient opted out':'',draft:null};
+    const {agent,channel}=steps[next.stage];
+    switch(next.stage) {
+    case 0:
+      return event({...next,contactId:'TS-DEMO-021',owner:next.branch+' Reception'},agent,channel,'Fictional inquiry captured once and routed to '+next.branch+'.','Captured');
+    case 1:
+      next = event({...next,consent:next.consent===false?false:true},agent,'CRM','Branch and preferred contact channel recorded. Demo opt-in checked.','Qualified');
+      return queue(next);
+    case 2:
+      return event({...next,appointment:{id:'SIM-271',status:'Confirmed',slot:'Thu 15:30'}},agent,channel,'Patient selected the slot. Mock scheduler confirmed Thursday 15:30.','Confirmed');
+    case 3:
+      if (!next.appointment || next.appointment.status!=='Confirmed') return {...state,blockedReason:'No confirmed appointment to move'};
+      next = event({...next,appointment:{...next.appointment,slot:'Fri 11:00'}},agent,'Clinic calendar','Replacement confirmed before Thursday slot was released.','Confirmed');
+      next = event(next,agent,'Clinic calendar','A separate, eligible demo waitlist record accepted Thursday 15:30. Only one refill was confirmed.','Refilled');
+      return queue(next);
+    case 4:
+      if (!next.appointment || next.appointment.status!=='Confirmed') return {...state,blockedReason:'No confirmed appointment to attend'};
+      return queue(event({...next,attended:true,appointment:{...next.appointment,status:'Attended'}},'Reception','CRM','Staff marked the visit attended. Aftercare became eligible.','Attended'));
+    case 5:
+      if (!next.attended) return {...state,blockedReason:'Attendance is required'};
+      return queue(event(next,agent,'CRM','Checked attendance, consent and no prior invitation. No sentiment or rating check.','Eligibility'));
+    case 6:
+      if (!next.attended) return {...state,blockedReason:'Attendance is required'};
+      if (next.appointment && next.appointment.status==='Confirmed') return event({...next,finished:true,blockedReason:'Next visit already booked'},agent,'CRM','Recall suppressed because another visit is booked.','Blocked');
+      next=queue(event(next,agent,'CRM','Mock clinic-defined recall date is due. Checked for an existing booking and prior reminder.','Eligibility'));
+      return next.needsApproval?next:{...next,finished:true};
+    default:return state;
+    }
+  }
+  return Object.freeze({create,act,steps});
+});
+</script><script>'use strict';
+(() => {
+  const $=(s,e=document)=>e.querySelector(s), $$=(s,e=document)=>[...e.querySelectorAll(s)];
+  const steps=$$('.chapter'), links=$$('.journey-nav a');
+  let frame=0, active=-1;
+  function draw(){
+    frame=0;
+    const height=window.innerHeight;
+    let i=0;
+    steps.forEach((step,n)=>{if(step.getBoundingClientRect().top<height*.56)i=n;});
+    if(i===active)return;
+    active=i;
+    steps.forEach((step,n)=>step.classList.toggle('current',n===i));
+    links.forEach((l,n)=>n===i?l.setAttribute('aria-current','step'):l.removeAttribute('aria-current'));
+  }
+  function requestDraw(){if(!frame)frame=requestAnimationFrame(draw);}
+  window.addEventListener('scroll',requestDraw,{passive:true});window.addEventListener('resize',requestDraw,{passive:true});
+  requestDraw();
+  const api=globalThis.TopSmileEngine; if(!api){$('#console-content').textContent='The local console could not load.';return;}
+  const branch=$('#lab-branch'), content=$('#console-content'), tabs=$$('[data-console-tab]'), keys=$$('[data-act]');
+  let state=api.create(branch.value),tab='contact',activeAgent=0;
+  const esc=(s)=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+  const row=(a,b)=>'<div><dt>'+esc(a)+'</dt><dd>'+esc(b)+'</dd></div>';
+  const rules=[
+    ['Route by selected branch.','A single lead record owns this inquiry.','Existing contact → append the touchpoint. Unclear branch → assign reception.'],
+    ['Use the contact’s preferred, permitted channel.','Draft times only after a simulated availability check.','Clinical question or unclear consent → reception.'],
+    ['Use the clinic calendar when available.','Record a booking only after acceptance.','Timeout or duplicate → check the booking before retrying.'],
+    ['Keep the first slot until the new one is confirmed.','Offer the released slot only to eligible waitlist contacts.','Conflicting requests → confirm at most one booking.'],
+    ['Require attendance and approved aftercare copy.','Use a provider payment link only if connected and in scope.','Care questions → the clinic, not the agent.'],
+    ['Use the same neutral request for every eligible attendee.','Exclude opt-outs, unverified visits and duplicate requests.','Log a service issue for staff; never hide the public review option based on feedback.'],
+    ['Use the clinic-approved due date, copy and consent.','Stop on a new booking, opt-out, or when a reminder already went out.','Unclear plan → reception, without disclosing treatment details.'],
+  ];
+  const actionLabels=['Start with the enquiry','Qualify contact','Confirm a slot','Move & refill','Record attendance','Queue review','Queue recall'];
+  function showContact(){
+    const st=state.stage<0?'Waiting for enquiry':api.steps[state.stage].label+(state.finished?' complete':'');
+    const initials=state.contactId?'MR':'—';
+    return '<div class="contact-top"><div class="contact-avatar" aria-hidden="true">'+initials+'</div><div><span class="console-kicker">'+esc(state.contactId||'NEW CONTACT')+'</span><h3>'+ (state.contactId?'Maya R.':'Awaiting capture')+'</h3><p>'+esc(state.branch)+' · Fictional record</p></div><span class="state-chip">'+esc(st)+'</span></div>'+
+      '<dl class="contact-data">'+row('Next owner',state.owner)+row('Contact consent',state.consent===null?'Not recorded':state.consent?'Opted in for demo':'Opted out')+row('Appointment',state.appointment?state.appointment.slot+' · '+state.appointment.status:'Not booked')+row('Touchpoints logged',state.events.length)+'</dl>';
+  }
+  function showTouches(){
+    if(!state.events.length)return '<div class="console-empty"><span class="console-kicker">AUDIT TRAIL</span><h3>No touchpoints yet.</h3><p>Capture an enquiry to start the contact timeline.</p></div>';
+    return '<div class="ledger-head"><h3>Touchpoint history</h3><span>'+state.events.length+' events</span></div><ol class="touch-list">'+state.events.slice().reverse().map(e=>'<li><time>'+esc(e.time)+'</time><div><b>'+esc(e.agent)+'</b><p>'+esc(e.text)+'</p><span>'+esc(e.channel)+'</span></div><b class="event-status">'+esc(e.status)+'</b></li>').join('')+'</ol>';
+  }
+  function showAgents(){
+    const a=api.steps[activeAgent], items=rules[activeAgent];
+    return '<div class="agent-grid"><div class="agent-menu" aria-label="Select an agent">'+api.steps.map((s,i)=>'<button type="button" data-agent="'+i+'" aria-pressed="'+String(i===activeAgent)+'">'+esc(s.agent)+'</button>').join('')+'</div><article class="agent-card"><p class="console-kicker">'+esc(a.channel)+'  /  PROPOSED RULESET</p><h3>'+esc(a.agent)+'</h3><p>'+esc(a.summary)+'</p><dl>'+row('When to act',items[0])+row('What it can do',items[1])+row('When it hands off',items[2])+'</dl></article></div>';
+  }
+  function render(){
+    tabs.forEach(n=>n.setAttribute('aria-pressed',String(n.dataset.consoleTab===tab)));
+    content.innerHTML=(tab==='touches'?showTouches():tab==='agents'?showAgents():showContact())+
+      (state.draft?'<div class="approval-banner"><span>Waiting for approval</span><b>'+esc(state.draft.text)+'</b><small>'+esc(state.draft.agent)+' · '+esc(state.draft.channel)+'</small></div>':'')+
+      (state.blockedReason?'<p class="blocked-rule"><b>Guardrail: </b>'+esc(state.blockedReason)+'</p>':'');
+    for(const b of keys){
+      switch(b.dataset.act){
+      case 'advance':
+        b.textContent=state.finished?'Journey complete':state.needsApproval?'Draft pending':(actionLabels[state.stage+1]||'Waiting for approval');
+        b.hidden=state.needsApproval; b.disabled=state.finished||state.paused||state.needsApproval||state.stage>=6;break;
+      case 'approve':b.hidden=!state.needsApproval;b.disabled=!state.needsApproval||state.paused||state.consent!==true;break;
+      case 'reject':b.hidden=!state.needsApproval;b.disabled=!state.needsApproval;break;
+      case 'pause':b.textContent=state.paused?'Resume agent':'Pause agent';break;
+      case 'optout':b.disabled=state.stage<0||state.consent===false;break;
+      }
+    }
+  }
+  tabs.forEach(b=>b.addEventListener('click',()=>{tab=b.dataset.consoleTab;render()}));
+  content.addEventListener('click',e=>{
+    const b=e.target.closest('[data-agent]');if(!b)return;
+    activeAgent=Number(b.dataset.agent);render();$('[data-agent="'+activeAgent+'"]',content)?.focus();
+  });
+  keys.forEach(b=>b.addEventListener('click',()=>{
+    const action=b.dataset.act==='pause'&&state.paused?'resume':b.dataset.act;
+    const heldFocus=document.activeElement===b;
+    state=api.act(state,action);render();
+    if(heldFocus&&(b.hidden||b.disabled)){
+      const next=['approve','reject','advance','reset','pause']
+        .map(name=>keys.find(key=>key.dataset.act===name))
+        .find(key=>key&&!key.hidden&&!key.disabled);
+      next?.focus();
+    }
+  }));
+  branch.addEventListener('change',()=>{state=api.create(branch.value);render()});
+  render();
+})();
+</script><script>'use strict';
+function estimateDeskMinutes(volumePerBranch, minutesEach, sharePercent) {
+  const inputs=[[volumePerBranch,0,1000],[minutesEach,0,60],[sharePercent,0,100]];
+  if(inputs.some(([n,lo,hi])=>!Number.isInteger(n)||n<lo||n>hi)) return null;
+  return Math.round(volumePerBranch * 2 * minutesEach * sharePercent / 100);
+}
+if(typeof module!=='undefined'&&module.exports)module.exports={estimateDeskMinutes};
+if(typeof document!=='undefined'){
+ const f=document.querySelector('#desk-time');
+ if(f){
+  const out=f.querySelector('output');
+  const update=()=>{
+   const n=estimateDeskMinutes(...['volume','minutes','share'].map(key=>f.elements.namedItem(key).valueAsNumber));
+   out.textContent=n===null?'Enter three whole numbers within the shown ranges.':new Intl.NumberFormat('en-AE',{maximumFractionDigits:1}).format(n/60)+' hours per week across both branches';
+  };
+  f.addEventListener('input',update);
+  f.addEventListener('submit',e=>{e.preventDefault();update();});
+  update();
+ }
+}
+</script></body></html>
